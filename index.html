@@ -54,12 +54,26 @@
         }
 
         .app {
+            display: flex;
+            gap: 20px;
             padding: 24px 0;
             border-bottom: 1px solid #eee;
         }
 
         .app:last-child {
             border-bottom: none;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        .app-info {
+            flex: 1;
         }
 
         .app-name {
@@ -115,6 +129,13 @@
             color: #999;
             font-size: 13px;
         }
+
+        @media (max-width: 480px) {
+            .app {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
     </style>
 </head>
 <body>
@@ -128,20 +149,26 @@
             <h2>Apps</h2>
             
             <div class="app">
-                <div class="app-name">レシぱ</div>
-                <p class="app-description">食材管理とAIレシピ提案を組み合わせた料理サポートアプリ。冷蔵庫の中身を登録すると、最適なレシピを提案し、買い物リストも自動生成します。</p>
-                <div class="app-links">
-                    <a href="https://apps.apple.com/jp/app/%E3%83%AC%E3%82%B7%E3%81%B1-%E9%A3%9F%E6%9D%90%E7%AE%A1%E7%90%86%E3%81%A8%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%A1%E3%83%A2%E3%81%A8%E3%83%AC%E3%82%B7%E3%83%94%E3%81%AE%E8%87%AA%E5%8B%95%E9%80%A3%E6%90%BA/id6754275917" target="_blank">App Store</a>
-                    <a href="https://play.google.com/store/apps/details?id=com.PPOONN.recipa" target="_blank">Google Play</a>
+                <img src="images/recipaIcon.png" alt="レシぱ" class="app-icon">
+                <div class="app-info">
+                    <div class="app-name">レシぱ</div>
+                    <p class="app-description">食材管理とAIレシピ提案を組み合わせた料理サポートアプリ。冷蔵庫の中身を登録すると、最適なレシピを提案し、買い物リストも自動生成します。</p>
+                    <div class="app-links">
+                        <a href="https://apps.apple.com/jp/app/%E3%83%AC%E3%82%B7%E3%81%B1-%E9%A3%9F%E6%9D%90%E7%AE%A1%E7%90%86%E3%81%A8%E8%B2%B7%E3%81%84%E7%89%A9%E3%83%A1%E3%83%A2%E3%81%A8%E3%83%AC%E3%82%B7%E3%83%94%E3%81%AE%E8%87%AA%E5%8B%95%E9%80%A3%E6%90%BA/id6754275917" target="_blank">App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.PPOONN.recipa" target="_blank">Google Play</a>
+                    </div>
                 </div>
             </div>
 
             <div class="app">
-                <div class="app-name">Limited Reversi</div>
-                <p class="app-description">リバーシゲームにデッキ構築の要素を追加した、戦略性が進化した新感覚ゲーム。</p>
-                <div class="app-links">
-                    <a href="https://apps.apple.com/jp/app/limited-reversi-%E3%83%AA%E3%83%9F%E3%83%86%E3%83%83%E3%83%89-%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B7/id6753639395" target="_blank">App Store</a>
-                    <a href="https://play.google.com/store/apps/details?id=k.k.PPOONN.limited_reverai" target="_blank">Google Play</a>
+                <img src="images/limitedReversiIcon.png" alt="Limited Reversi" class="app-icon">
+                <div class="app-info">
+                    <div class="app-name">Limited Reversi</div>
+                    <p class="app-description">リバーシゲームにデッキ構築の要素を追加した、戦略性が進化した新感覚ゲーム。</p>
+                    <div class="app-links">
+                        <a href="https://apps.apple.com/jp/app/limited-reversi-%E3%83%AA%E3%83%9F%E3%83%86%E3%83%83%E3%83%89-%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B7/id6753639395" target="_blank">App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=k.k.PPOONN.limited_reverai" target="_blank">Google Play</a>
+                    </div>
                 </div>
             </div>
         </section>
